@@ -1,0 +1,8 @@
+Aplicação para geração de simulado:
+
+- ter 3 tipos de prova (discursiva, objetiva e mista)
+	Para isso será utilizado o padrão Abstract Factory
+
+- Os simulados sera constituidos de provas, e provas de questao (só colocarei se ficar complexo)
+
+- encontrar outro padrao para para substituir o composite (provavelmente sera o template method)
