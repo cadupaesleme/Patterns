@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Patterns
+namespace Patterns.AbstractFactory
 {
-    class Prova
+    interface IModoProva
     {
+        string NomeModoProva();
     }
 }
