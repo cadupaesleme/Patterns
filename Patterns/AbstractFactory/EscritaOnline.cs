@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace Patterns.AbstractFactory
 {
-    interface IModoProva
+    class EscritaOnline : IEscrita
     {
-        string NomeModoProva();
+        public string Nome()
+        {
+            return "Online Escrita";
+        }
     }
 }

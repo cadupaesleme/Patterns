@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace Patterns.AbstractFactory
 {
-    class ProvaOnline : IModoProva
+    interface IAvaliacaoFactory
     {
-        public string NomeModoProva()
-        {
-            return "Prova Online";
-        }
+        IEscrita GetEscrita(string escritaModalidade);
+        IOral GetOral(string oralModalidade);
     }
 }

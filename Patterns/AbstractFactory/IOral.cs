@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Patterns.AbstractFactory
 {
-    interface ITipoProva
+    interface IOral
     {
-        string NomeTipoProva();
+        string Nome();
     }
 }

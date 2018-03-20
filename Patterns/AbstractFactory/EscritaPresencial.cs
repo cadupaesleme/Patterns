@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Patterns.AbstractFactory
 {
-    interface IProvaFactory
+    class EscritaPresencial : IEscrita
     {
-        IModoProva GetModoProva(string modo);
-        ITipoProva GetTipoProva(string tipoProva);
-
+        public string Nome()
+        {
+            return "Presencial Escrita";
+        }
     }
 }

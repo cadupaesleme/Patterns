@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace Patterns.AbstractFactory
 {
-    class ProvaDiscursiva : ITipoProva
+    interface IEscrita
     {
-        public string NomeTipoProva()
-        {
-            return "Prova Discursiva";
-        }
+        string Nome();
     }
 }

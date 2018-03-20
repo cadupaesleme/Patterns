@@ -43,14 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractFactory\IModoProva.cs" />
-    <Compile Include="AbstractFactory\IProvaFactory.cs" />
-    <Compile Include="AbstractFactory\ITipoProva.cs" />
-    <Compile Include="AbstractFactory\PrimeiraProva.cs" />
-    <Compile Include="AbstractFactory\ProvaDiscursiva.cs" />
-    <Compile Include="AbstractFactory\ProvaPresencial.cs" />
-    <Compile Include="AbstractFactory\ProvaObjetiva.cs" />
-    <Compile Include="AbstractFactory\ProvaOnline.cs" />
+    <Compile Include="AbstractFactory\Avaliacao.cs" />
+    <Compile Include="AbstractFactory\EscritaOnline.cs" />
+    <Compile Include="AbstractFactory\EscritaPresencial.cs" />
+    <Compile Include="AbstractFactory\IAvaliacaoFactory.cs" />
+    <Compile Include="AbstractFactory\IEscrita.cs" />
+    <Compile Include="AbstractFactory\IOral.cs" />
+    <Compile Include="AbstractFactory\OralOnline.cs" />
+    <Compile Include="AbstractFactory\OralPresencial.cs" />
+    <Compile Include="AbstractFactory\PrimeiraAvaliacao.cs" />
+    <Compile Include="AbstractFactory\SegundaAvaliacao.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

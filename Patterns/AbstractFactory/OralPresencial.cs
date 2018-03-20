@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Patterns.AbstractFactory
 {
-    class ProvaPresencial : IModoProva
+    class OralPresencial : IOral
     {
-        public string NomeModoProva()
+        public string Nome()
         {
-            return "Prova Presencial";
+            return "Presencial Oral";
         }
     }
 }
