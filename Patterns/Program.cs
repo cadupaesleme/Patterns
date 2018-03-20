@@ -1,4 +1,5 @@
 ﻿using Patterns.AbstractFactory;
+using Patterns.Composite;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,7 +43,40 @@ namespace Patterns
 
             //Gerar 2 provas escritas (primeira avaliacao e segunda avaliacao)
             Console.WriteLine("");
-            Console.WriteLine("-------------------------- Gerando os Provas Escritas do Curso --------------------------");
+            Console.WriteLine("-------------------------- Gerando as Provas Escritas do Curso --------------------------");
+            Console.WriteLine("");
+            Questao questao1 = new Questao();
+            questao1.Enunciado = "Enunciado da Questão 1";
+            Questao questao2 = new Questao();
+            questao2.Enunciado = "Enunciado da Questão 2";
+            Questao questao3 = new Questao();
+            questao3.Enunciado = "Enunciado da Questão 3";
+            
+            QuestaoComposta questao4 = new QuestaoComposta { Enunciado = "Enunciado da Questão 4" };
+            questao4.SubQuestoes.Add(new Questao { Enunciado = "Enunciado da Questão 4.1" });
+            questao4.SubQuestoes.Add(new Questao { Enunciado = "Enunciado da Questão 4.2" });
+            questao4.SubQuestoes.Add(new Questao { Enunciado = "Enunciado da Questão 4.3" });
+
+            Console.WriteLine("");
+            Console.WriteLine("--------- Gerando Prova ---------");
+            //colocar isso em objeto prova e percorrer
+            Console.WriteLine(questao1.Enunciado);
+            Console.WriteLine("");
+            Console.WriteLine(questao2.Enunciado);
+            Console.WriteLine("");
+            Console.WriteLine(questao3.Enunciado);
+            Console.WriteLine("");
+            Console.WriteLine(questao4.Enunciado);
+            foreach(Questao subquestao in questao4.SubQuestoes)
+            {
+                Console.WriteLine("");
+                Console.WriteLine("---" + subquestao.Enunciado);
+            }
+
+
+
+
+
 
 
             Console.ReadLine();

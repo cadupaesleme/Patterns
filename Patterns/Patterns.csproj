@@ -53,6 +53,9 @@
     <Compile Include="AbstractFactory\OralPresencial.cs" />
     <Compile Include="AbstractFactory\PrimeiraAvaliacao.cs" />
     <Compile Include="AbstractFactory\SegundaAvaliacao.cs" />
+    <Compile Include="Composite\IQuestao.cs" />
+    <Compile Include="Composite\Questao.cs" />
+    <Compile Include="Composite\QuestaoComposta.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
