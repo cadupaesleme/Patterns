@@ -6,22 +6,27 @@ using System.Threading.Tasks;
 
 namespace Patterns.Composite
 {
-    public class Questao : IQuestao
+    class QuestaoComposite : IQuestao
     {
         public string Enunciado { get; set; }
+        private List<IQuestao> SubQuestoes = new List<IQuestao>();
 
         public void Adicionar(IQuestao questao)
         {
-            //Console.WriteLine("Cannot add to a PrimitiveElement");
+            SubQuestoes.Add(questao);
         }
 
         public void Remover(IQuestao questao)
         {
-            //Console.WriteLine("Cannot remove from a PrimitiveElement");
+            SubQuestoes.Remove(questao);
         }
 
-        public void Exibir(int i, int j, int pai)
+        public void Exibir(int i,int j, int pai)
         {
+//            Console.WriteLine(new String('-', i) +
+  //            "+ " + i +" " + j + pai +   Enunciado);
+
+
             string aux = "";
             if (j == 0)
             {
@@ -33,8 +38,13 @@ namespace Patterns.Composite
                 //aux = new String('-', i) + " " + i + " " + j + pai + Enunciado;
             }
 
-
             Console.WriteLine(aux);
+
+            foreach (IQuestao q in SubQuestoes)
+            {
+                j++;
+                q.Exibir(i + 1,j, pai);
+            }
         }
     }
 }
