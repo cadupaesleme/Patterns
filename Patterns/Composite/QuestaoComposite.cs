@@ -33,7 +33,7 @@ namespace Patterns.Composite
             if (iterador == 0)
                 Console.WriteLine(new String(' ', i) + pai + enunciado);
             else
-            Console.WriteLine(new String(' ', i) + pai + "." + iterador + enunciado);
+                Console.WriteLine(new String(' ', i) + pai + "." + iterador + enunciado);
 
             //desce um nivel no pai
             if (this.GetType() == typeof(QuestaoComposite) && iterador != 0)
@@ -42,7 +42,7 @@ namespace Patterns.Composite
                 iterador = 0;
             }
 
-            
+
             //exibe os filhos
             foreach (IQuestao q in SubQuestoes)
             {
