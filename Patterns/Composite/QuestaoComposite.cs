@@ -9,7 +9,11 @@ namespace Patterns.Composite
     class QuestaoComposite : IQuestao
     {
         public string Enunciado { get; set; }
+        public TipoQuestao TipoQuestao { get; set; }
         private List<IQuestao> SubQuestoes = new List<IQuestao>();
+
+        //QuestaoComposta é uma questão que possui subitens 
+        public QuestaoComposite() { TipoQuestao = TipoQuestao.Questão_Composta; }
 
         public void Adicionar(IQuestao questao)
         {
@@ -21,29 +25,29 @@ namespace Patterns.Composite
             SubQuestoes.Remove(questao);
         }
 
-        public void Exibir(int i,int j, int pai)
+        public void Exibir(int i, string pai, int iterador)
         {
-//            Console.WriteLine(new String('-', i) +
-  //            "+ " + i +" " + j + pai +   Enunciado);
+            string enunciado = ") " + Enunciado + " - (" + TipoQuestao + ")";
 
-
-            string aux = "";
-            if (j == 0)
-            {
-                aux = pai.ToString();
-            }
+            //se for o primeiro iterador nao exibe pois é 0
+            if (iterador == 0)
+                Console.WriteLine(new String(' ', i) + pai + enunciado);
             else
+            Console.WriteLine(new String(' ', i) + pai + "." + iterador + enunciado);
+
+            //desce um nivel no pai
+            if (this.GetType() == typeof(QuestaoComposite) && iterador != 0)
             {
-                aux = pai.ToString() + j + i;
-                //aux = new String('-', i) + " " + i + " " + j + pai + Enunciado;
+                pai = pai + "." + iterador;
+                iterador = 0;
             }
 
-            Console.WriteLine(aux);
-
+            
+            //exibe os filhos
             foreach (IQuestao q in SubQuestoes)
             {
-                j++;
-                q.Exibir(i + 1,j, pai);
+                iterador++;
+                q.Exibir(i + 1, pai, iterador);
             }
         }
     }

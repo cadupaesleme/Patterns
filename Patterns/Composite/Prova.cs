@@ -24,7 +24,7 @@ namespace Patterns.Composite
             foreach (IQuestao q in Questoes)
             {
                 pai++;
-                q.Exibir(1,0,pai);
+                q.Exibir(1,pai.ToString(),0);
             }
         }
     }

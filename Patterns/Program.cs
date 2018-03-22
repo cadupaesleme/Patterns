@@ -51,12 +51,17 @@ namespace Patterns
 
             //criar questoes para a prova
             QuestaoComposite questao1 = new QuestaoComposite { Enunciado = "Enunciado" };
-            questao1.Adicionar(new Questao { Enunciado = "Enunciado da Questão" });
-            questao1.Adicionar(new Questao { Enunciado = "Enunciado da Questão" });
-            
+            questao1.Adicionar(new QuestaoObjetiva { Enunciado = "Enunciado da Questão" });
+            questao1.Adicionar(new QuestaoDiscursiva { Enunciado = "Enunciado da Questão" });
+
 
             QuestaoComposite composite = new QuestaoComposite { Enunciado = "Enunciado da Questão" };
-            composite.Adicionar(new Questao { Enunciado = "Enunciado da Questão" });
+            composite.Adicionar(new QuestaoDiscursiva { Enunciado = "Enunciado da Questão" });
+
+            QuestaoComposite composite2 = new QuestaoComposite { Enunciado = "Enunciado da Questão" };
+            composite2.Adicionar(new QuestaoDiscursiva { Enunciado = "Enunciado da Questão" });
+            composite.Adicionar(composite2);
+
             questao1.Adicionar(composite);
 
             provaEscrita1.Questoes.Add(questao1);
@@ -67,8 +72,8 @@ namespace Patterns
             provaEscrita1.Questoes.Add(questao2);
 
             QuestaoComposite questao3 = new QuestaoComposite { Enunciado = "Enunciado" };
-            questao3.Adicionar(new Questao { Enunciado = "Enunciado da Questão" });
-            questao3.Adicionar(new Questao { Enunciado = "Enunciado da Questão" });
+            questao3.Adicionar(new QuestaoDiscursiva { Enunciado = "Enunciado da Questão" });
+            questao3.Adicionar(new QuestaoObjetiva { Enunciado = "Enunciado da Questão" });
             provaEscrita1.Questoes.Add(questao3);
 
             provaEscrita1.ExibirProva();

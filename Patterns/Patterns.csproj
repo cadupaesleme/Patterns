@@ -55,7 +55,8 @@
     <Compile Include="AbstractFactory\SegundaAvaliacao.cs" />
     <Compile Include="Composite\IQuestao.cs" />
     <Compile Include="Composite\Prova.cs" />
-    <Compile Include="Composite\Questao.cs" />
+    <Compile Include="Composite\QuestaoDiscursiva.cs" />
+    <Compile Include="Composite\QuestaoObjetiva.cs" />
     <Compile Include="Composite\QuestaoComposite.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
