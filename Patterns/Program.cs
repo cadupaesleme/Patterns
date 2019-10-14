@@ -14,7 +14,7 @@ namespace Patterns
     {
         static void Main(string[] args)
         {
-
+            //teste commit
             //Primeiramente gera as avaliações possiveis para o curso em Primeira Avaliacao e Segunda Avaliacao
             //Utilizado o padrão abstract factory para construir as avaliações
             IAvaliacaoFactory primeiraAvaliacaoFactory = new PrimeiraAvaliacao();
